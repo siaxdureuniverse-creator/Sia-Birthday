@@ -2919,8 +2919,105 @@ text-shadow:
     .hero h1 {
         font-size: clamp(2rem, 8vw, 3.5rem);
     }
+ 
+/* ==================================
+   LIGHTBOX CLOSE BUTTON FIX
+================================== */
+
+.lightbox {
+    z-index: 1000001;
+}
+
+.close-lightbox {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.18);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1000002;
+    transform: none;
+}
+
+.close-lightbox:hover {
+    background: #FFD166;
+    color: #111;
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+    .close-lightbox {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 75%;
+        object-fit: contain;
+    }
+
+    .prev-image {
+        left: 10px;
+    }
+
+    .next-image {
+        right: 10px;
+    }
+
+    .prev-image,
+    .next-image {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+}
+
 
     .hero p {
         font-size: 15px;
+    }
+}
+.close-finale {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.18);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 1000005;
+}
+
+.close-finale:hover {
+    background: #FFD166;
+    color: #111;
+}
+
+@media (max-width: 768px) {
+    .close-finale {
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+        font-size: 27px;
     }
 }
